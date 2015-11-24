@@ -2,10 +2,7 @@
 
 require('shelljs/global');
 
-var fs = require('fs');
+const WWW_SERVER_PATH = __dirname + '/../server/';
 
-const WWW_PATH = __dirname + '/../www'
-const SERVER_PORT   = fs.readFileSync(__dirname + '/SERVER_PORT', 'utf-8');
-
-cd(WWW_PATH);
-exec('http-server -p' + SERVER_PORT);
+// 启动下载服务
+exec('node ' + WWW_SERVER_PATH + '/bin/www')

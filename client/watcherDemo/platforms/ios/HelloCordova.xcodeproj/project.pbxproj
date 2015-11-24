@@ -38,11 +38,17 @@
 		7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
+		A10DD6FF1C0445D7005E18FB /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6EA1C0445D7005E18FB /* GCDAsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
+		A10DD7001C0445D7005E18FB /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6EC1C0445D7005E18FB /* GCDAsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
+		A10DD7011C0445D7005E18FB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6EF1C0445D7005E18FB /* AsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
+		A10DD7021C0445D7005E18FB /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6F11C0445D7005E18FB /* AsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
+		A10DD7031C0445D7005E18FB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6F51C0445D7005E18FB /* ioapi.c */; settings = {ASSET_TAGS = (); }; };
+		A10DD7041C0445D7005E18FB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6F71C0445D7005E18FB /* mztools.c */; settings = {ASSET_TAGS = (); }; };
+		A10DD7051C0445D7005E18FB /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6F91C0445D7005E18FB /* unzip.c */; settings = {ASSET_TAGS = (); }; };
+		A10DD7061C0445D7005E18FB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6FB1C0445D7005E18FB /* zip.c */; settings = {ASSET_TAGS = (); }; };
+		A10DD7071C0445D7005E18FB /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DD6FE1C0445D7005E18FB /* SSZipArchive.m */; settings = {ASSET_TAGS = (); }; };
+		A10DD70C1C044BFA005E18FB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A10DD70B1C044BFA005E18FB /* libz.tbd */; };
 		A17C8F461C03DE050031BDA9 /* QBaseCordovaWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C8F391C03DE050031BDA9 /* QBaseCordovaWatcher.m */; settings = {ASSET_TAGS = (); }; };
-		A17C8F471C03DE050031BDA9 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C8F3E1C03DE050031BDA9 /* GCDAsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
-		A17C8F481C03DE050031BDA9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C8F401C03DE050031BDA9 /* GCDAsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
-		A17C8F491C03DE050031BDA9 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C8F431C03DE050031BDA9 /* AsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
-		A17C8F4A1C03DE050031BDA9 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C8F451C03DE050031BDA9 /* AsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 /* End PBXBuildFile section */
 
@@ -103,16 +109,28 @@
 		7E7966DC1810823500FA85AD /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		7E7966DD1810823500FA85AD /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* HelloCordova-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HelloCordova-Info.plist"; path = "../HelloCordova-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A10DD6E91C0445D7005E18FB /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		A10DD6EA1C0445D7005E18FB /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		A10DD6EB1C0445D7005E18FB /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		A10DD6EC1C0445D7005E18FB /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		A10DD6EE1C0445D7005E18FB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		A10DD6EF1C0445D7005E18FB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		A10DD6F01C0445D7005E18FB /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		A10DD6F11C0445D7005E18FB /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		A10DD6F41C0445D7005E18FB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		A10DD6F51C0445D7005E18FB /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		A10DD6F61C0445D7005E18FB /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		A10DD6F71C0445D7005E18FB /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		A10DD6F81C0445D7005E18FB /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		A10DD6F91C0445D7005E18FB /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		A10DD6FA1C0445D7005E18FB /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		A10DD6FB1C0445D7005E18FB /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		A10DD6FC1C0445D7005E18FB /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		A10DD6FD1C0445D7005E18FB /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		A10DD6FE1C0445D7005E18FB /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		A10DD70B1C044BFA005E18FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A17C8F381C03DE050031BDA9 /* QBaseCordovaWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseCordovaWatcher.h; sourceTree = "<group>"; };
 		A17C8F391C03DE050031BDA9 /* QBaseCordovaWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseCordovaWatcher.m; sourceTree = "<group>"; };
-		A17C8F3D1C03DE050031BDA9 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		A17C8F3E1C03DE050031BDA9 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		A17C8F3F1C03DE050031BDA9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		A17C8F401C03DE050031BDA9 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		A17C8F421C03DE050031BDA9 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		A17C8F431C03DE050031BDA9 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		A17C8F441C03DE050031BDA9 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
-		A17C8F451C03DE050031BDA9 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		EB87FDF21871DA7A0020F90C /* merges */ = {isa = PBXFileReference; lastKnownFileType = folder; name = merges; path = ../../merges; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
@@ -125,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10DD70C1C044BFA005E18FB /* libz.tbd in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -220,6 +239,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A10DD70B1C044BFA005E18FB /* libz.tbd */,
 				5AEE5B34173C68D80009041E /* CoreLocation.framework */,
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -295,6 +315,63 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
+		A10DD6E71C0445D7005E18FB /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				A10DD6E81C0445D7005E18FB /* GCD */,
+				A10DD6ED1C0445D7005E18FB /* RunLoop */,
+			);
+			path = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		A10DD6E81C0445D7005E18FB /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				A10DD6E91C0445D7005E18FB /* GCDAsyncSocket.h */,
+				A10DD6EA1C0445D7005E18FB /* GCDAsyncSocket.m */,
+				A10DD6EB1C0445D7005E18FB /* GCDAsyncUdpSocket.h */,
+				A10DD6EC1C0445D7005E18FB /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		A10DD6ED1C0445D7005E18FB /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				A10DD6EE1C0445D7005E18FB /* AsyncSocket.h */,
+				A10DD6EF1C0445D7005E18FB /* AsyncSocket.m */,
+				A10DD6F01C0445D7005E18FB /* AsyncUdpSocket.h */,
+				A10DD6F11C0445D7005E18FB /* AsyncUdpSocket.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		A10DD6F21C0445D7005E18FB /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				A10DD6F31C0445D7005E18FB /* minizip */,
+				A10DD6FD1C0445D7005E18FB /* SSZipArchive.h */,
+				A10DD6FE1C0445D7005E18FB /* SSZipArchive.m */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		A10DD6F31C0445D7005E18FB /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				A10DD6F41C0445D7005E18FB /* crypt.h */,
+				A10DD6F51C0445D7005E18FB /* ioapi.c */,
+				A10DD6F61C0445D7005E18FB /* ioapi.h */,
+				A10DD6F71C0445D7005E18FB /* mztools.c */,
+				A10DD6F81C0445D7005E18FB /* mztools.h */,
+				A10DD6F91C0445D7005E18FB /* unzip.c */,
+				A10DD6FA1C0445D7005E18FB /* unzip.h */,
+				A10DD6FB1C0445D7005E18FB /* zip.c */,
+				A10DD6FC1C0445D7005E18FB /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		A17C8F361C03DDFA0031BDA9 /* watcher */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,41 +394,11 @@
 		A17C8F3A1C03DE050031BDA9 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				A17C8F3B1C03DE050031BDA9 /* AsyncSocket */,
+				A10DD6E71C0445D7005E18FB /* AsyncSocket */,
+				A10DD6F21C0445D7005E18FB /* ZipArchive */,
 			);
 			name = vendor;
 			path = ../../../vendor;
-			sourceTree = "<group>";
-		};
-		A17C8F3B1C03DE050031BDA9 /* AsyncSocket */ = {
-			isa = PBXGroup;
-			children = (
-				A17C8F3C1C03DE050031BDA9 /* GCD */,
-				A17C8F411C03DE050031BDA9 /* RunLoop */,
-			);
-			path = AsyncSocket;
-			sourceTree = "<group>";
-		};
-		A17C8F3C1C03DE050031BDA9 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-				A17C8F3D1C03DE050031BDA9 /* GCDAsyncSocket.h */,
-				A17C8F3E1C03DE050031BDA9 /* GCDAsyncSocket.m */,
-				A17C8F3F1C03DE050031BDA9 /* GCDAsyncUdpSocket.h */,
-				A17C8F401C03DE050031BDA9 /* GCDAsyncUdpSocket.m */,
-			);
-			path = GCD;
-			sourceTree = "<group>";
-		};
-		A17C8F411C03DE050031BDA9 /* RunLoop */ = {
-			isa = PBXGroup;
-			children = (
-				A17C8F421C03DE050031BDA9 /* AsyncSocket.h */,
-				A17C8F431C03DE050031BDA9 /* AsyncSocket.m */,
-				A17C8F441C03DE050031BDA9 /* AsyncUdpSocket.h */,
-				A17C8F451C03DE050031BDA9 /* AsyncUdpSocket.m */,
-			);
-			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		EB87FDF11871DA420020F90C /* Staging */ = {
@@ -490,13 +537,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				A17C8F471C03DE050031BDA9 /* GCDAsyncSocket.m in Sources */,
+				A10DD7051C0445D7005E18FB /* unzip.c in Sources */,
+				A10DD7071C0445D7005E18FB /* SSZipArchive.m in Sources */,
+				A10DD6FF1C0445D7005E18FB /* GCDAsyncSocket.m in Sources */,
 				A17C8F461C03DE050031BDA9 /* QBaseCordovaWatcher.m in Sources */,
-				A17C8F4A1C03DE050031BDA9 /* AsyncUdpSocket.m in Sources */,
+				A10DD7021C0445D7005E18FB /* AsyncUdpSocket.m in Sources */,
+				A10DD7041C0445D7005E18FB /* mztools.c in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
-				A17C8F481C03DE050031BDA9 /* GCDAsyncUdpSocket.m in Sources */,
+				A10DD7001C0445D7005E18FB /* GCDAsyncUdpSocket.m in Sources */,
+				A10DD7031C0445D7005E18FB /* ioapi.c in Sources */,
+				A10DD7061C0445D7005E18FB /* zip.c in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				A17C8F491C03DE050031BDA9 /* AsyncSocket.m in Sources */,
+				A10DD7011C0445D7005E18FB /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

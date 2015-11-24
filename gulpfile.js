@@ -1,3 +1,4 @@
+require('shelljs/global');
 var gulp = require('gulp');
 
 var fs = require('fs');
@@ -8,6 +9,10 @@ var socket = dgram.createSocket("udp4");
 
 const WWW_PATH = __dirname + '/www';
 const SOCKET_PORT = 30012;
+
+const DOWNLOAD_SERVER_PATH = __dirname + '/server'
+const DOWNLOAD_SERVER_PORT = 3012;
+const DOWNLOAD_SERVER_URL = '/www_zip/www.zip';
 
 var IPv4 = getIPv4();
 
@@ -28,27 +33,70 @@ gulp.task('watch', function () {
  	gulp.watch('www/*/*', fileChangedCallback);
 });
 
+gulp.task('update', function() {
+	// 更新服务端最新安装包
+	var zipPath = DOWNLOAD_SERVER_PATH + '/public/www_zip/www.zip';
+	// 移除旧的Zip包
+	exec('rm -rf ' + zipPath);
+	// 压缩最新的Zip包
+	cd(WWW_PATH);
+	exec('zip -r ' + zipPath + ' .');
+
+
+	// 通知客户端更新
+	var downloadURL = 'http://' + IPv4 + ':' + DOWNLOAD_SERVER_PORT + DOWNLOAD_SERVER_URL;
+	var body = {
+		'event': 'update',
+		'url'  : downloadURL
+	};
+	messageSend(body);
+});
+
 /**
  *	文件发生变化回调
  */
 function fileChangedCallback(event) {
-	var filePath = event.path;
+	var filePath = event.path;	
+
+	// 获取文件相对路径
 	var relativePath = path.relative(WWW_PATH, filePath);
 
+	// 判断是否为删除操作
+	var isExists = fs.existsSync(filePath);
+	if (!isExists) {
+		var body = {
+			'event'  : 'watch',
+  		'exists' : 0,
+  		'path'   : relativePath,
+  		'content': null
+  	};
+		messageSend(body);
+		return;
+	};
+
+	// 如果文件更新（添加、或者更新）
 	fs.readFile(filePath, 'utf-8', function (err, data) {
   	if (err) throw err;
 
   	var body = {
+  		'event'  : 'watch',
+  		'exists' : 1,
   		'path'   : relativePath,
   		'content': data
   	};
+		messageSend(body);
+	});
+}
 
-  	var message = new Buffer(JSON.stringify(body));
-		socket.send(message, 0, message.length, SOCKET_PORT, IPv4, function(err, bytes) {
-			if (err) {
-				console.log('update error');
-			}
-		});
+/** 发送消息至客户端 */
+function messageSend(messageObj) {
+	var message = new Buffer(JSON.stringify(messageObj));
+	socket.send(message, 0, message.length, SOCKET_PORT, IPv4, function(err, bytes) {
+		if (err) {
+			console.log('update error');
+		}else {
+			console.log('update succ');			
+		}
 	});
 }
 
