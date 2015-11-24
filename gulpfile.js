@@ -16,6 +16,11 @@ const DOWNLOAD_SERVER_URL = '/www_zip/www.zip';
 
 var IPv4 = getIPv4();
 
+gulp.task('', function() {
+	// 启动下载服务
+	exec('node ' + DOWNLOAD_SERVER_PATH + '/bin/www')
+});
+
 gulp.task('watch', function () {
 	// 判断指定的www文件夹是否存在
 	var isExists = fs.existsSync(WWW_PATH);
