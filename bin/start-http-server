@@ -1,8 +1,0 @@
-#!/usr/bin/env node
-
-require('shelljs/global');
-
-const WWW_SERVER_PATH = __dirname + '/../server/';
-
-// 启动下载服务
-exec('node ' + WWW_SERVER_PATH + '/bin/www')
