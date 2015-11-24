@@ -30,3 +30,12 @@ Cordova的监察工具，简单的实现了所见即所得的效果。
 
 1. 请确认手机与笔记本是否连接再同一个局域网下（可以正常通讯）。
 2. 请确认所有服务已经启动
+
+## Contact
+
+**author:** Andy Jin  
+**Email:** andy_ios@163.com
+
+##Licenses
+
+All source code is licensed under the [MIT License](https://github.com/andy0323/QBaseLanguage/blob/master/LICENSE).

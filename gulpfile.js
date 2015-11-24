@@ -16,7 +16,7 @@ const DOWNLOAD_SERVER_URL = '/www_zip/www.zip';
 
 var IPv4 = getIPv4();
 
-gulp.task('', function() {
+gulp.task('default', function() {
 	// 启动下载服务
 	exec('node ' + DOWNLOAD_SERVER_PATH + '/bin/www')
 });
@@ -34,8 +34,7 @@ gulp.task('watch', function () {
 	});
 
   // WWW目录的监控
-  gulp.watch('www/*',   fileChangedCallback);
- 	gulp.watch('www/*/*', fileChangedCallback);
+  gulp.watch('www/**',   fileChangedCallback);
 });
 
 gulp.task('update', function() {
@@ -61,6 +60,10 @@ gulp.task('update', function() {
  *	文件发生变化回调
  */
 function fileChangedCallback(event) {
+
+console.log('a');
+
+	return;
 	var filePath = event.path;	
 
 	// 获取文件相对路径
