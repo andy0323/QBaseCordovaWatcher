@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+require('shelljs/global');
+
+var fs = require('fs');
+var os = require('os');  
+
+const PROJECT_NAME = 'iphone-html-ui';
+const PROJECT_PATH = __dirname + '/../src'
+const BUILD_PATH = PROJECT_PATH + '/build';
+const FILE_PATH = PROJECT_PATH + '/HTML_URL';
+
+const SERVER_DOMAIN = getLocolIP();
+const SERVER_PORT   = fs.readFileSync(__dirname + '/SERVER_PORT', 'utf-8');
+
+var serverURL = 'http://' + SERVER_DOMAIN + ':' + SERVER_PORT;
+
+// 写入文件
+fs.writeFileSync(FILE_PATH, serverURL);
+
+// 编译App
+cd(PROJECT_PATH);
+rm('-rf', BUILD_PATH);
+mkdir('-p', BUILD_PATH);
+exec('xcodebuild -arch i386 -sdk iphonesimulator8.1 -scheme iphone-html-ui CONFIGURATION_BUILD_DIR=' + BUILD_PATH);
+exec('ios-sim launch ' + BUILD_PATH + '/' + PROJECT_NAME + '.app');
+
+/***********************************************/
+
+/**
+ * 获取本地ip
+ */
+function getLocolIP () {
+	var IPv4;
+	for(var i = 0; i < os.networkInterfaces().en0.length; i++) {   
+    	if(os.networkInterfaces().en0[i].family == 'IPv4') {  
+        	IPv4 = os.networkInterfaces().en0[i].address;  
+    	}  
+	} 
+	return IPv4; 
+}

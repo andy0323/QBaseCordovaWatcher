@@ -1,0 +1,23 @@
+{
+  "name": "qbase_cordova_watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy0323/QBaseCordovaWatcher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andy0323/QBaseCordovaWatcher/issues"
+  },
+  "homepage": "https://github.com/andy0323/QBaseCordovaWatcher",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "shelljs": "^0.5.3"
+  }
+}
