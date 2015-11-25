@@ -46,7 +46,6 @@ gulp.task('update', function() {
 	cd(WWW_PATH);
 	exec('zip -r ' + zipPath + ' .');
 
-
 	// 通知客户端更新
 	var downloadURL = 'http://' + IPv4 + ':' + DOWNLOAD_SERVER_PORT + DOWNLOAD_SERVER_URL;
 	var body = {
@@ -60,10 +59,6 @@ gulp.task('update', function() {
  *	文件发生变化回调
  */
 function fileChangedCallback(event) {
-
-console.log('a');
-
-	return;
 	var filePath = event.path;	
 
 	// 获取文件相对路径
